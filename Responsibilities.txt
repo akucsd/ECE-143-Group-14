@@ -1,0 +1,15 @@
+1) Knowing your Dataset - Data Cleaning and Preprocessing and finalising the parameters to estimate 
+Person(s) in charge- Everyone 
+
+2) EDA - Univariate analysis, bivariate analysis, derived metrics,charts, feature selection
+Person(s) in charge- Alokita, Sampada, Ben
+
+3) Classifier - either 1 or a combination of 2 - either a bivariate classification problem, 
+multivariate classification problem, meal plan
+Person(s) in charge- Alokita, Sampada, Anbo
+
+4) Streamlit - putting all the visuals together for both EDA and Classifier
+Person(s) in charge- Anbo, Ben
+
+5) PPT (Design) - Content would be shared by everyone
+Person(s) in charge for design - Sampada
