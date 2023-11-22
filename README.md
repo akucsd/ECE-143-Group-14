@@ -26,3 +26,16 @@ ECE-143-Project:.
 
 TODO:
 Come up with null hypothesis for EDA using the MACROS dataset
+Finish the Classifier
+Meal Recommender
+EDA by DEC 1
+Whoever computes any insights put mention it to the group in writing so that whoever presents will know what to say exactly during the presentation.
+
+PRECAUTIONS:
+1) Please don't mess with the original dataset . Keep it as it is.. Clean the data in the macros for your analysis and inform the group about the data cleaning part and what's final, else it'll mess everybody's prediction
+2) Do not manipulate the original dataset
+3) Once you're done, create ppt slides, put your explanations there and share with the group.. on the respective channels
+4) Also their requirements is to work on python files. Please make python files and then only push on the remote repository. Make sure to use assert and docstrings. Use a python notebook only if you need visualization for the dataframes or charts
+5) Also mention all the third party libraries you're using for analysis in the README.md file of github (cover only main libraries used for data manipulation or visualization or classification), as it is required in the project requirement under "Libraries" mentioned here.
+6) Update the file struct in the README.md file, if you're on Windows just enter the directory of your local git repo and type in "tree /F" command in the terminal. Use appropriate commands for your OS. 
+
