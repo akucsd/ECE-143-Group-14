@@ -12,6 +12,7 @@ Beautiful Soup
 Pandas
 
 File Structure till date:
+```bash
 ECE-143-Project:.
 │   ECE 143 - Group 14 Proposal (1).pdf
 │   README.md
@@ -21,6 +22,7 @@ ECE-143-Project:.
         Macros_merge.ipynb
         ObesityDataSet_raw_and_data_sinthetic.csv
         Obesity_with_Macros.csv
+```
 
 TODO:
 Come up with null hypothesis for EDA using the MACROS dataset
