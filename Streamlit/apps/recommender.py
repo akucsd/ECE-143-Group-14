@@ -1,4 +1,4 @@
 import streamlit as st
 
 def app():
-    st.title('Model')
+    st.title('Recommender')
