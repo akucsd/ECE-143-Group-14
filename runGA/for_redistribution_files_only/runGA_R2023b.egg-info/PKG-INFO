@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: runGA-R2023b
+Version: 23.2
+Summary: A Python interface to runGA
+Home-page: https://www.mathworks.com/
+Author: MathWorks
+License: UNKNOWN
+Platform: Linux
+Platform: Windows
+Platform: macOS
+
+UNKNOWN
+
