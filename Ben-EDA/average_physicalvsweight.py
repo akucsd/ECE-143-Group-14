@@ -50,23 +50,7 @@ def PAFvsweight():
     plt.ylabel('physical activity frequency per week')
     plt.xticks(rotation=45, ha='right')
     
-    # Perform t-test for each pair of categories
-    '''for i in range(len(order)):
-        for j in range(i + 1, len(order)):
-            category1 = order[i]
-            category2 = order[j]
-            group1 = filtered_data[filtered_data['NObeyesdad'] == category1]['FAF']
-            group2 = filtered_data[filtered_data['NObeyesdad'] == category2]['FAF']
-            t_statistic, p_value = ttest_ind(group1, group2)
-        
-            print(f"T-test between {category1} and {category2}:")
-            print(f"  p-value = {p_value}")
-        
-            if p_value < 0.05:  # Adjust the significance level as needed
-                print("  The difference in mean is statistically significant.")
-            else:
-                print("  The difference in mean is not statistically significant.")
-    '''
+
     # Perform correlation test between 'FAF' and 'BMI'
     correlation, p_value_corr = pearsonr(filtered_data['FAF'], filtered_data['BMI'])
     
