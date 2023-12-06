@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Read the CSV file
-df = pd.read_csv('Obesity_with_Macros.csv')
+df = pd.read_csv('ObesityDataSet_raw_and_data_sinthetic.csv')
 
 df['NObeyesdad'] = df['NObeyesdad'].replace({
     'Overweight_Level_I': 'Overweight/Obesity',
@@ -17,6 +17,10 @@ df['NObeyesdad'] = df['NObeyesdad'].replace({
     'Insufficient_Weight': 'Not Overweight'
 })
 
+# Set display order
+order = ['Automobile', 'Public_Transportation', 'Motorbike', 'Bike', 'Walking']
+df['MTRANS'] = pd.Categorical(df['MTRANS'], categories=order, ordered=True)
+
 # Group by 'mtrans' and 'obesity', and count occurrences
 grouped = df.groupby(['MTRANS', 'NObeyesdad']).size().unstack()
 
@@ -30,7 +34,6 @@ grouped_percent.plot(kind='barh', stacked=True, ax=ax)
 
 # Adding labels and title
 ax.set_xlabel('Percentage')
-# ax.set_ylabel('Alcohol Consumption')
 ax.set_title('Overweight vs. Not Overweight')
 
 # Display the plot
