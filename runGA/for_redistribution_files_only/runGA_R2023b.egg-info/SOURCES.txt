@@ -1,0 +1,7 @@
+setup.py
+runGA/__init__.py
+runGA/runGA.ctf
+runGA_R2023b.egg-info/PKG-INFO
+runGA_R2023b.egg-info/SOURCES.txt
+runGA_R2023b.egg-info/dependency_links.txt
+runGA_R2023b.egg-info/top_level.txt
