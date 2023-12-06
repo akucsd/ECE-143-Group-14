@@ -2,7 +2,6 @@ import streamlit as st
 import time
 
 def app():
-    st.title('Recommender')
     # Title of the app
     st.title("Food Recommender System")
 
