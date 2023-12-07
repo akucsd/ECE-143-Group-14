@@ -1,4 +1,7 @@
 import streamlit as st
+import pandas as pd
+import numpy as np
+import pickle
 import time
 
 def app():
@@ -33,6 +36,48 @@ def app():
 
     activity_level = st.sidebar.selectbox("Select Your Activity Level", activity_options)
 
+    # Collects user input features into dataframe, set other features to default values
+    data = {
+            'Gender': gender,
+            'Age': age,
+            'Height': height/100,
+            'Weight': weight,
+            'family_history_with_overweight': 1.0,
+            'FAVC': 1.0,
+            'FCVC': 2.0,
+            'NCP': 2.5, 
+            'CAEC': 2.0,
+            'SMOKE': 0.0,
+            'CH2O': 2.0,
+            'SCC': 0.0,
+            'FAF': activity_options,
+            'TUE': 1.0,
+            'CALC': 2.0,
+            'MTRANS': 3.0
+    }
+    input_df = pd.DataFrame(data)
+
+
+    # Encoding of ordinal features
+    input_df['Gender'] = input_df['Gender'].replace({
+    'Female': 0.0,
+    'Male': 1.0
+    })
+
+    input_df['FAF'] = input_df['FAF'].replace({
+        'Sedentary: little or no exercise': 0.0,
+        'Light: exercise 1-3 times/week': 0.6,
+        "Moderate: exercise 4-5 times/week": 1.2, 
+        "Active: daily exercise or intense exercise 3-4 times/week": 1.8, 
+        "Very Active: intense exercise 6-7 times/week": 2.4, 
+        "Extra Active: very intense exercise daily, or physical job": 3.0
+    })
+
+    # Display BMI
+    BMI = weight/(height**2)*10000
+    BMI = round(BMI, 1)
+    st.write(f"Your BMI is {BMI} kg/m\u00B2.")
+
     # Button to trigger recommendations
     if st.sidebar.button("Get Food Recommendations"):
         # Display loading spinner while the recommender system is processing
@@ -40,11 +85,20 @@ def app():
             # Simulate a delay to mimic the time taken by the recommender system
             time.sleep(3)  # Replace this with the actual time your system takes
 
-            # TODO: Call your recommender system here with the user inputs
-            # Replace the following placeholder code with the actual call
+
+            # Reads in saved classification model
+            load_clf = pickle.load(open('apps\Models\obesity_clf.pkl', 'rb'))
+            
+
+            # TODO Replace the following placeholder code with the actual call
             recommendations = ["Placeholder Recommendation 1", "Placeholder Recommendation 2", "Placeholder Recommendation 3"]
+
+
             # Placeholder for obesity level (replace with actual logic)
-            obesity_level = "Type I obesity"
+            # Apply model to make predictions
+            obesity_num = load_clf.predict(input_df)[0]
+            levels_in_order = ['Insufficient_Weight', 'Normal_Weight', 'Obesity_Type_I','Obesity_Type_II','Obesity_Type_III','Overweight_Level_I','Overweight_Level_II']
+            obesity_level=levels_in_order[obesity_num]
 
         # Display recommendations once the loading is complete
         st.subheader("Food Recommendations")
