@@ -201,7 +201,7 @@ def app():
             
             # Display obesity level
             st.subheader("Your Obesity Level")
-            st.write(f"Based on the information provided, your obesity level is: {obesity_level}")
+            st.write(f"Based on the information provided, your weight classification is: {obesity_level}")
             
 
             
@@ -215,10 +215,10 @@ def app():
         st.success("Calculation of Macros Complete!")
         # Display suggested macros from calculate_macros
         st.subheader("Suggested Macros:")
-        st.write(f"Calories: {cal}")
-        st.write(f"Protein: {protein}")
-        st.write(f"Carbs: {carbs}")
-        st.write(f"Fats: {fat}")
+        st.write(f"Calories(cal): {cal}")
+        st.write(f"Protein(grams): {protein}")
+        st.write(f"Carbs(grams): {carbs}")
+        st.write(f"Fats(grams): {fat}")
         
     # Display the second spinner while ga_algo is processing
         with st.spinner("Generating Meals Recommendations..."):
@@ -236,16 +236,16 @@ def app():
         st.markdown("**Total Nutritional Information for the Recommended Foods:**")
         
         st.markdown("#### Calories:")
-        st.write(f"Calories: {calories}")
+        st.write(f"Calories(cal): {calories}")
         
         st.markdown("#### Protein:")
-        st.write(f"Protein: {protein}")
+        st.write(f"Protein(grams): {protein}")
         
         st.markdown("#### Carbs:")
-        st.write(f"Carbs: {carbz}")
+        st.write(f"Carbs(grams): {carbz}")
         
         st.markdown("#### Fats:")
-        st.write(f"Fats: {fats}")
+        st.write(f"Fats(grams): {fats}")
 
        
     # Display some information or instructions
