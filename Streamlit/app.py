@@ -1,6 +1,6 @@
 import streamlit as st
 from multiapp import MultiApp
-from apps import home, data, recommender, EDA
+from apps import home, recommender, EDA
 
 app = MultiApp()
 st.markdown("""
@@ -9,7 +9,6 @@ Please select...
 """)
 
 app.add_app('Homepage', home.app)
-app.add_app('Pandas Profiling Report', data.app)
 app.add_app('Exploratory Data Analysis', EDA.app)
 app.add_app('Recommender', recommender.app)
 
