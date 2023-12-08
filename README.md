@@ -9,7 +9,7 @@ https://www.calculator.net/macro-calculator.html
 
 # Main 3rd Party Libraries used :
 Beautiful Soup <br>
-Pandas, Numpy, Scipy <br>
+Pandas, Numpy, scikit-learn <br>
 LightGBM <br>
 Streamlit <br>
 
