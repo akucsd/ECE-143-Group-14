@@ -27,7 +27,7 @@ Meal Recommender Streamlit App <br>
 # Citation #Just for inspiration 
 [Dataset](https://archive.ics.uci.edu/dataset/544/estimation+of+obesity+levels+based+on+eating+habits+and+physical+condition).<br>
 [Meal Recommender](https://github.com/AngelsGills/Meal-Recommendation-Optimization/tree/main) <br>
-[EDA] (https://stacyy.medium.com/itp-449-exploratory-data-analysis-project-obesity-levels-based-on-eating-habits-and-physical-82fa10775c2e<br>)
+[EDA] (https://stacyy.medium.com/itp-449-exploratory-data-analysis-project-obesity-levels-based-on-eating-habits-and-physical-82fa10775c2e)<br>
 [Classifier] (https://medium.com/geekculture/obesity-classification-and-data-analysis-via-machine-learning-6635682f0f87)<br>
 
 
